@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mateusz Głód">
+    <link rel="stylesheet" href="style.css">
+    <title>Atelier Glina</title>
+</head>
+<body>
+<header>
+
+<h1>Atelier Glina</h1>
+<a href="wyroby" style="text-decoration: none;">Wyroby</a>
+<a href="cennik" style="text-decoration: none;">Cennik</a>
+<a href="zapis" style="text-decoration: none;">Zapis</a>
+</header>   
+<main>
+<section class="usługi">
+<h3>Usługi</h3>
+<dl>
+    <dt>Kubek</dt>
+    <dd>od 45 zł</dd>
+</dl>
+<dl>
+    <dt>Miska</dt>
+    <dd>od 70 zł</dd>
+</dl>
+<dl>
+    <dt>Wazon</dt>
+    <dd>od 90 zł</dd>
+</dl>
+</section>
+
+<h3>Wyroby</h3>
+
+
+
+<section class="wyroby">
+    
+<div>
+<img src=" https://picsum.photos/400/260?random=1" alt="Losowe zdiecie">
+<h5>Kubek Kamienny</h5>
+<p>Kubek toczon ręcznie, szkliwiany</p>
+</div>
+
+<div>
+    <img src="https://picsum.photos/400/260?random=2" alt="Losowe zdiecie">
+    <h5>Miska na owoce</h5>
+    <p>Szeroka miska stołowa</p>
+</div>
+
+<div>
+        <img src=" https://picsum.photos/400/260?random=3" alt="Losowe zdiecie">
+        <h5>Wazon wysoki</h5>
+        <p>Wazon na kwaity cięte</p>
+</div>
+
+<h3>Cennik</h3>
+<table>
+
+<tr>
+    <th>Wyrób</th>
+    <th>Wypał</th>
+     <th>Cena</th>   
+</tr>
+<tr>
+    <td>Kubek</td>
+    <td>2 dni</td>
+    <td>45zł</td>
+</tr>
+<tr>
+    <td>Miska</td>
+    <td>3 dni</td>
+    <td>70zł</td>
+</tr>
+<tr>
+    <td>Wazon</td>
+    <td>4 dni</td>
+    <td>90zł</td>
+</tr>
+
+</table>
+</section>
+
+<section class="zapis">
+<h3>Zapis na wypał</h3>
+<form name="formularz" id="form">
+<label>Imie<input type="text" name="imie" required><br></label>
+<label>E-mail<input type="text" name="email" required><br></label>
+<label>Wyrób
+<select name="wyrob"required>
+<option value="kubek">Kubek</option>
+<option value="miska">Miska</option>
+<option value="wazon">Wazon</option>
+</select>
+<br></label>
+<input type="button" value="Zapisz się na wypał" onclick="funkcja()">
+</label>
+</form>
+
+<div>
+    <p id="dane"></p>
+</div>
+</section>
+</main>
+
+<footer><p>Mateusz Głód 4i</p></footer>
+
+
+
+<script>
+    let imie1=document.forms.formularz.imie.value
+    let mail1=document.forms.formularz.mail.value
+    let wyrob1=document.forms.formularz.wyrob.value
+
+    function funkcja(){
+if(wyrob1="kubek"){
+    document.getElementById("dane").innerHTML = imie1 + "("+mail1+") zapisał/a się na wypał Kubek,trwający 2 dni w cenie 45zł" 
+}else if(wyrob1="miska"){
+    document.getElementById("dane").innerHTML = imie1 + "("+mail1+") zapisał/a się na wypał Miska,trwający 3 dni w cenie 70zł" 
+}else if(wyrob1="wazon"){   
+    document.getElementById("dane").innerHTML = imie1 + "("+mail1+") zapisał/a się na wypał Wazon,trwający 4 dni w cenie 90zł" 
+   }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

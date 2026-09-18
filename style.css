@@ -1,93 +1,82 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f2f4f3;
-    color: #333;
-}
 
-header {
-    background-color: #17221b;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
+body{
+background-color: rgb(241, 250, 238);
+color: rgb(27, 67, 50);
+font-size: 16px;
+margin: 0;
+line-height: 1,5;
+font-family: Arial, Helvetica, sans-serif;
 }
-
-header h1 {
-    margin: 0;
-    font-size: 32px;
+h1{
+background-color: rgb(27, 67, 50);
+color: white;
+text-align: center;
 }
+header, footer{
+background-color: rgb(27, 67, 50);
+color: white;
+text-align: center; 
+padding: 24px;
 
-header p {
-    margin-top: 12px;
-    color: #b8d8c0;
 }
-
+a{
+color: #95d5b2;
+}
+a:hover{
+color: white;
+}
 main {
-    width: 70%;
-    margin: 45px auto;
+    width: 936px;
+    margin: 0 auto;
+    padding: 24px;
+}
+.wyroby {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+}
+.wyroby > div {
+    border: 1px solid rgb(27, 67, 50);
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.5); 
+}
+.wyroby h5 {
+    font-size: 18px;
+    margin: 8px 0;
 }
 
-.opisstrony {
-    background-color: white;
-    padding: 35px;
-    border-left: 6px solid #38a169;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px #d5d5d5;
-}
-
-.opisstrony h2 {
-    margin-top: 0;
-    color: #246b45;
-}
-
-.opisstrony p {
-    color: #666;
-    line-height: 1.6;
-}
-
-.opisstrony li {
-    margin: 14px 0;
-}
-
-h2 {
-    margin-top: 40px;
-    color: #246b45;
-}
-
-table {
+.wyroby img {
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px #d5d5d5;
+    max-width: 280px;
+    height: auto;
+    display: block;
+    margin: 0 auto 12px auto;
+}
+table {
+    grid-column: span 3; 
+    width: 480px;
+    margin: 24px auto; 
+    border-collapse: collapse;
+    border: 1px solid rgb(27, 67, 50);
 }
 
-th {
-    background-color: #38a169;
-    color: white;
-    padding: 16px;
+table th, table td 
+{
+    border: 1px solid rgb(27, 67, 50);
+    
     text-align: left;
 }
 
-td {
-    padding: 16px;
-    border-bottom: 1px solid #e5e5e5;
+table th {
+    background-color: rgb(27, 67, 50); 
+    color: #ffffff;
+}
+#form {
+    width: 480px;
+    border: 2px dashed #2d6a4f;
+    border-radius: 8px;
+    padding: 16px 24px;
+    width: 100%;
 }
 
-tr:last-child td {
-    border-bottom: none;
-}
-
-tr:hover {
-    background-color: #eaf6ee;
-}
-
-footer {
-    background-color: #17221b;
-    color: #cbd5ce;
-    text-align: center;
-    padding: 22px;
-    margin-top: 60px;
-}
